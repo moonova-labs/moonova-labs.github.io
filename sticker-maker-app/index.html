@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sticker Maker: WA Sticker DIY</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:#f4f7fb;
+      color:#1f2937;
+      line-height:1.7;
+      padding:40px 20px;
+    }
+
+    .container{
+      max-width:920px;
+      margin:auto;
+      background:#ffffff;
+      border-radius:20px;
+      padding:42px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .badge{
+      display:inline-block;
+      background:#dcfce7;
+      color:#166534;
+      padding:6px 14px;
+      border-radius:999px;
+      font-size:14px;
+      margin-bottom:20px;
+      font-weight:600;
+    }
+
+    h1{
+      font-size:42px;
+      line-height:1.2;
+      color:#111827;
+      margin-bottom:14px;
+    }
+
+    .subtitle{
+      font-size:18px;
+      color:#6b7280;
+      margin-bottom:30px;
+    }
+
+    h2{
+      margin-top:40px;
+      margin-bottom:18px;
+      font-size:28px;
+      color:#111827;
+    }
+
+    p{
+      margin-bottom:18px;
+      color:#374151;
+      font-size:16px;
+    }
+
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:20px;
+      margin-top:20px;
+    }
+
+    .card{
+      background:#f9fafb;
+      border:1px solid #e5e7eb;
+      border-radius:16px;
+      padding:22px;
+      transition:0.2s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    .card h3{
+      font-size:20px;
+      margin-bottom:10px;
+      color:#111827;
+    }
+
+    .card p{
+      margin-bottom:0;
+      color:#4b5563;
+      font-size:15px;
+    }
+
+    ul{
+      margin-left:22px;
+      margin-top:10px;
+    }
+
+    li{
+      margin-bottom:12px;
+      color:#374151;
+    }
+
+    .steps{
+      background:#f9fafb;
+      border-radius:18px;
+      padding:28px;
+      margin-top:20px;
+      border:1px solid #e5e7eb;
+    }
+
+    .step{
+      margin-bottom:18px;
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+    }
+
+    .step-number{
+      width:34px;
+      height:34px;
+      border-radius:50%;
+      background:#111827;
+      color:#ffffff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:14px;
+      font-weight:bold;
+      flex-shrink:0;
+    }
+
+    .cta{
+      margin-top:50px;
+      background:linear-gradient(135deg,#111827,#374151);
+      border-radius:20px;
+      padding:40px;
+      text-align:center;
+      color:white;
+    }
+
+    .cta h2{
+      color:white;
+      margin-top:0;
+      margin-bottom:12px;
+    }
+
+    .cta p{
+      color:#d1d5db;
+      margin-bottom:24px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 28px;
+      background:#ffffff;
+      color:#111827;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.2s ease;
+    }
+
+    .btn:hover{
+      transform:scale(1.04);
+    }
+
+    .footer{
+      margin-top:50px;
+      padding-top:20px;
+      border-top:1px solid #e5e7eb;
+      color:#6b7280;
+      text-align:center;
+      font-size:14px;
+    }
+
+    @media(max-width:768px){
+
+      .container{
+        padding:24px;
+      }
+
+      h1{
+        font-size:34px;
+      }
+
+      h2{
+        font-size:24px;
+      }
+
+      .subtitle{
+        font-size:16px;
+      }
+
+      .cta{
+        padding:28px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="badge">Sticker Creator App</div>
+
+    <h1>Sticker Maker: WA Sticker DIY</h1>
+
+    <p class="subtitle">
+      Express more, chat better, and turn every conversation into something unforgettable.
+    </p>
+
+    <p>
+      Sticker Maker: WA Sticker DIY is your ultimate destination for discovering,
+      creating, and sharing stickers that truly match your style.
+    </p>
+
+    <p>
+      Whether you enjoy browsing viral memes or creating your own stickers from personal photos,
+      our powerful tools help you express emotions, humor, and creativity effortlessly.
+    </p>
+
+    <h2>🌟 Key Features</h2>
+
+    <div class="feature-grid">
+
+      <div class="card">
+        <h3>✨ Unlimited Sticker Packs</h3>
+        <p>
+          Create and organize unlimited sticker collections for every mood,
+          meme, and conversation.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>✂️ Smart Manual Cutout</h3>
+        <p>
+          Remove backgrounds instantly with advanced AI cutout tools
+          for clean and professional stickers.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🎨 Stylish Text & Decorations</h3>
+        <p>
+          Add captions, emojis, and fun decorations with beautiful fonts
+          to personalize every sticker.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>📱 Cross-Platform Sharing</h3>
+        <p>
+          Export stickers to WhatsApp or save as PNG for Telegram,
+          Messenger, Instagram, and more.
+        </p>
+      </div>
+
+    </div>
+
+    <h2>💡 Why Choose Our Sticker Creator?</h2>
+
+    <ul>
+      <li>✅ Huge library of high-quality sticker designs.</li>
+      <li>✅ Easy-to-use interface for fast and smooth creation.</li>
+      <li>✅ Professional-grade cropping for cleaner sticker edges.</li>
+      <li>✅ Create stylish text stickers without design experience.</li>
+      <li>✅ Perfect for chats, memes, and social media content.</li>
+      <li>✅ Lightweight performance optimized for Android devices.</li>
+    </ul>
+
+    <h2>🚀 How to Make Your Own Stickers</h2>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="step-number">1</div>
+        <div>
+          Open the app and tap <strong>Create New Pack</strong>.
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <div>
+          Choose a photo from your gallery or capture a new image instantly.
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <div>
+          Use Smart Cutout tools to remove the background with precision.
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <div>
+          Add text, emojis, and stylish decorations to make your sticker unique.
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">5</div>
+        <div>
+          Save your sticker pack and share it directly to WhatsApp or other social apps.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cta">
+
+      <h2>Say More Than Words Ever Could</h2>
+
+      <p>
+        Create hilarious memes, emotional reactions, and custom sticker packs
+        that make every conversation more fun.
+      </p>
+
+      <a href="#" class="btn">
+        Download Sticker Maker Today
+      </a>
+
+    </div>
+
+    <div class="footer">
+      © 2025 Sticker Maker: WA Sticker DIY. All rights reserved.
+    </div>
+
+  </div>
+
+</body>
+</html>
