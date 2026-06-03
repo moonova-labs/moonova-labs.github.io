@@ -1,1 +1,405 @@
-Hello Moonova
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hermesy - Mobile App Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#0b0f19;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    background:radial-gradient(circle,#4f46e5 0%,transparent 70%);
+    top:-250px;
+    right:-150px;
+    opacity:.4;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    background:radial-gradient(circle,#06b6d4 0%,transparent 70%);
+    bottom:-300px;
+    left:-150px;
+    opacity:.3;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:800px;
+}
+
+.badge{
+    display:inline-block;
+    padding:10px 18px;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:999px;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(12px);
+    margin-bottom:24px;
+    font-size:14px;
+}
+
+h1{
+    font-size:72px;
+    line-height:1.05;
+    font-weight:800;
+    margin-bottom:24px;
+}
+
+.gradient{
+    background:linear-gradient(90deg,#60a5fa,#22d3ee,#818cf8);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.subtitle{
+    font-size:22px;
+    line-height:1.8;
+    color:#b4bfd0;
+    margin-bottom:40px;
+    max-width:700px;
+}
+
+.buttons{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:16px 28px;
+    border-radius:14px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:linear-gradient(135deg,#4f46e5,#06b6d4);
+    color:white;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+    border:1px solid rgba(255,255,255,.15);
+    color:white;
+    background:rgba(255,255,255,.05);
+}
+
+section{
+    padding:100px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#9ca3af;
+    max-width:700px;
+    margin:0 auto 60px;
+    line-height:1.8;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:24px;
+}
+
+.card{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    padding:32px;
+    border-radius:24px;
+    backdrop-filter:blur(20px);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#4f46e5;
+}
+
+.card h3{
+    margin-bottom:14px;
+    font-size:24px;
+}
+
+.card p{
+    color:#9ca3af;
+    line-height:1.8;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:24px;
+}
+
+.stat{
+    text-align:center;
+    background:rgba(255,255,255,.04);
+    padding:40px;
+    border-radius:24px;
+}
+
+.stat h2{
+    font-size:54px;
+    margin-bottom:10px;
+    background:linear-gradient(135deg,#60a5fa,#22d3ee);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.cta{
+    text-align:center;
+    padding:120px 20px;
+    background:linear-gradient(
+        135deg,
+        rgba(79,70,229,.15),
+        rgba(6,182,212,.15)
+    );
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+.cta h2{
+    font-size:52px;
+    margin-bottom:20px;
+}
+
+.cta p{
+    color:#b4bfd0;
+    max-width:700px;
+    margin:auto;
+    margin-bottom:30px;
+    line-height:1.8;
+}
+
+footer{
+    text-align:center;
+    padding:40px 20px;
+    color:#6b7280;
+    border-top:1px solid rgba(255,255,255,.06);
+}
+
+.email{
+    color:#60a5fa;
+    text-decoration:none;
+}
+
+@media(max-width:768px){
+
+h1{
+    font-size:48px;
+}
+
+.subtitle{
+    font-size:18px;
+}
+
+.section-title{
+    font-size:36px;
+}
+
+.cta h2{
+    font-size:40px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+
+            <div class="badge">
+                ✨ Mobile App Studio
+            </div>
+
+            <h1>
+                Building
+                <span class="gradient">Mobile Apps</span>
+                That People Love
+            </h1>
+
+            <p class="subtitle">
+                Hermesy is a mobile app studio creating beautiful,
+                scalable, and user-focused applications for startups,
+                businesses, and creators worldwide.
+            </p>
+
+            <div class="buttons">
+                <a href="mailto:demircimamo@gmail.com" class="btn btn-primary">
+                    Contact Us
+                </a>
+
+                <a href="#services" class="btn btn-secondary">
+                    Explore Services
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+
+        <h2 class="section-title">
+            Why Hermesy
+        </h2>
+
+        <p class="section-subtitle">
+            We combine design, engineering, and product thinking
+            to build mobile experiences that users enjoy every day.
+        </p>
+
+        <div class="stats">
+
+            <div class="stat">
+                <h2>iOS</h2>
+                <p>Native Development</p>
+            </div>
+
+            <div class="stat">
+                <h2>Android</h2>
+                <p>Modern Mobile Apps</p>
+            </div>
+
+            <div class="stat">
+                <h2>AI</h2>
+                <p>Powered Experiences</p>
+            </div>
+
+            <div class="stat">
+                <h2>24/7</h2>
+                <p>Product Partnership</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+
+        <h2 class="section-title">
+            What We Do
+        </h2>
+
+        <p class="section-subtitle">
+            End-to-end services for building and growing
+            successful mobile products.
+        </p>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>📱 Mobile Development</h3>
+                <p>
+                    Native iOS, Android, and cross-platform
+                    applications focused on performance and quality.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🎨 Product Design</h3>
+                <p>
+                    User-centered design systems and interfaces
+                    crafted for engagement and retention.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🤖 AI Integration</h3>
+                <p>
+                    AI-powered features including image generation,
+                    automation, personalization, and analytics.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🚀 Growth & Optimization</h3>
+                <p>
+                    App Store optimization, analytics,
+                    monetization, and continuous product improvement.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="cta">
+
+    <h2>Let's Build Something Amazing</h2>
+
+    <p>
+        Whether you're launching a startup, validating an idea,
+        or scaling an existing product, Hermesy can help turn
+        your vision into a successful mobile application.
+    </p>
+
+    <a href="mailto:demircimamo@gmail.com" class="btn btn-primary">
+        Start a Conversation
+    </a>
+
+</section>
+
+<footer>
+    © 2026 Hermesy Studio · Contact:
+    <a class="email" href="mailto:demircimamo@gmail.com">
+        demircimamo@gmail.com
+    </a>
+</footer>
+
+</body>
+</html>
+```
