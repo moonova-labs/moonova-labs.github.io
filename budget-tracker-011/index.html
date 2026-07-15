@@ -1,1 +1,451 @@
-Hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Budget - Money Tracker</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f8ff;
+    color:#333;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    width:700px;
+    height:700px;
+    background:linear-gradient(45deg,#4facfe,#00f2fe);
+    border-radius:50%;
+    top:-350px;
+    left:-250px;
+    opacity:.2;
+    z-index:-1;
+}
+
+body::after{
+    content:'';
+    position:fixed;
+    width:600px;
+    height:600px;
+    background:linear-gradient(45deg,#43e97b,#38f9d7);
+    border-radius:50%;
+    bottom:-300px;
+    right:-200px;
+    opacity:.2;
+    z-index:-1;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 0;
+}
+
+.hero h1{
+    font-size:64px;
+    font-weight:800;
+    background:linear-gradient(90deg,#00c6ff,#0072ff,#00d084);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+    margin:30px auto;
+    max-width:820px;
+    font-size:20px;
+    line-height:1.8;
+    color:#555;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:18px 40px;
+    border-radius:60px;
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+    box-shadow:0 15px 35px rgba(0,114,255,.35);
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:60px;
+    color:#222;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.icon{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.7;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    margin-top:30px;
+}
+
+.stat{
+    border-radius:25px;
+    color:white;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.stat:nth-child(1){
+    background:linear-gradient(135deg,#43e97b,#38f9d7);
+}
+
+.stat:nth-child(2){
+    background:linear-gradient(135deg,#fa709a,#fee140);
+}
+
+.stat:nth-child(3){
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+}
+
+.stat:nth-child(4){
+    background:linear-gradient(135deg,#667eea,#764ba2);
+}
+
+.stat h2{
+    font-size:42px;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.phone{
+    background:linear-gradient(145deg,#00c6ff,#0072ff);
+    border-radius:40px;
+    padding:30px;
+    color:white;
+    box-shadow:0 20px 60px rgba(0,114,255,.35);
+}
+
+.phone h2{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.phone ul{
+    list-style:none;
+}
+
+.phone li{
+    padding:12px 0;
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+.text h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.text p{
+    color:#555;
+    line-height:1.9;
+    margin-bottom:20px;
+}
+
+.footer{
+    padding:60px 20px;
+    text-align:center;
+    color:#666;
+}
+
+@media(max-width:900px){
+
+.hero h1{
+    font-size:46px;
+}
+
+.about{
+    grid-template-columns:1fr;
+}
+
+.section-title{
+    font-size:34px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+<div class="container">
+
+<h1>💰 Budget</h1>
+
+<h2 style="margin-top:10px;font-size:34px;color:#444;">
+Money Tracker
+</h2>
+
+<p>
+Take control of your money with <b>Budget</b>, a simple personal finance app
+designed to help you track expenses, record income,
+manage your budget, and understand where every dollar goes.
+</p>
+
+<a class="btn" href="#">Start Managing Your Budget</a>
+
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<h2 class="section-title">
+✨ Everything You Need
+</h2>
+
+<div class="features">
+
+<div class="card">
+<div class="icon">💵</div>
+<h3>Track Income & Expenses</h3>
+<p>
+Record transactions in seconds and always keep your financial records up to date.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🎯</div>
+<h3>Budget Management</h3>
+<p>
+Monitor spending, control your budget, and know exactly how much money remains.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📊</div>
+<h3>Visual Statistics</h3>
+<p>
+Beautiful spending charts and category summaries make financial insights simple.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📂</div>
+<h3>Categories</h3>
+<p>
+Organize transactions into categories for a cleaner and more structured overview.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🧾</div>
+<h3>Detailed Records</h3>
+<p>
+View amount, date, time, transaction type and personal notes anytime.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">✏️</div>
+<h3>Edit Anytime</h3>
+<p>
+Need to change something? Update any saved transaction instantly.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">💰</div>
+<h3>Balance Overview</h3>
+<p>
+Monitor your total balance, income and expenses directly from the home screen.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📅</div>
+<h3>History</h3>
+<p>
+Review your financial history and better understand your daily cash flow.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+📈 Smart Financial Overview
+</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h2>💰</h2>
+<p>Total Balance</p>
+</div>
+
+<div class="stat">
+<h2>📈</h2>
+<p>Total Income</p>
+</div>
+
+<div class="stat">
+<h2>📉</h2>
+<p>Total Expenses</p>
+</div>
+
+<div class="stat">
+<h2>📊</h2>
+<p>Expense Analytics</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container about">
+
+<div class="phone">
+
+<h2>Why Choose Budget?</h2>
+
+<ul>
+
+<li>✔ Clean & modern interface</li>
+
+<li>✔ Fast expense recording</li>
+
+<li>✔ Easy income tracking</li>
+
+<li>✔ Budget planning tools</li>
+
+<li>✔ Spending analytics</li>
+
+<li>✔ Organized categories</li>
+
+<li>✔ Daily cash flow monitoring</li>
+
+<li>✔ Simple money management</li>
+
+</ul>
+
+</div>
+
+<div class="text">
+
+<h2>
+Take Control of Your Money
+</h2>
+
+<p>
+
+Budget helps you build healthier financial habits with an easy way to
+track expenses, monitor income, and stay on top of your personal budget.
+
+</p>
+
+<p>
+
+Whether you're managing everyday spending, planning monthly expenses,
+or simply trying to save more, Budget gives you a clear picture of your
+financial life through simple tools and beautiful statistics.
+
+</p>
+
+<a class="btn" href="#">Get Started Today</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<h2 style="font-size:36px;">Budget 💚</h2>
+
+<p style="margin-top:15px;">
+Track Expenses • Manage Budget • Understand Your Money
+</p>
+
+<p style="margin-top:20px;">
+© 2026 Budget - Money Tracker
+</p>
+
+</footer>
+
+</body>
+</html>
