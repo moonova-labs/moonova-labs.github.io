@@ -1,1 +1,457 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WiFi Manager & Speed Test</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f8ff;
+    color:#333;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    width:700px;
+    height:700px;
+    background:linear-gradient(45deg,#4facfe,#00f2fe);
+    border-radius:50%;
+    top:-320px;
+    left:-220px;
+    opacity:.18;
+    z-index:-1;
+}
+
+body::after{
+    content:'';
+    position:fixed;
+    width:650px;
+    height:650px;
+    background:linear-gradient(45deg,#43e97b,#38f9d7);
+    border-radius:50%;
+    bottom:-300px;
+    right:-220px;
+    opacity:.18;
+    z-index:-1;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 0;
+}
+
+.hero h1{
+    font-size:62px;
+    font-weight:800;
+    background:linear-gradient(90deg,#00c6ff,#0072ff,#00d084);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero h2{
+    margin-top:12px;
+    font-size:34px;
+    color:#374151;
+}
+
+.hero p{
+    max-width:900px;
+    margin:30px auto;
+    line-height:1.9;
+    font-size:20px;
+    color:#555;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:18px 42px;
+    border-radius:999px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+    box-shadow:0 15px 35px rgba(0,114,255,.3);
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:60px;
+    color:#111827;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#fff;
+    padding:34px;
+    border-radius:24px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.icon{
+    font-size:42px;
+    margin-bottom:18px;
+}
+
+.card h3{
+    margin-bottom:14px;
+    font-size:22px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.7;
+}
+
+.tools{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+.tool{
+    color:#fff;
+    text-align:center;
+    border-radius:24px;
+    padding:32px;
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+.tool:nth-child(1){
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+}
+
+.tool:nth-child(2){
+    background:linear-gradient(135deg,#43e97b,#38f9d7);
+}
+
+.tool:nth-child(3){
+    background:linear-gradient(135deg,#667eea,#764ba2);
+}
+
+.tool:nth-child(4){
+    background:linear-gradient(135deg,#fa709a,#fee140);
+}
+
+.tool h2{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.panel{
+    background:linear-gradient(145deg,#0072ff,#00c6ff);
+    color:#fff;
+    border-radius:30px;
+    padding:35px;
+    box-shadow:0 20px 50px rgba(0,114,255,.25);
+}
+
+.panel h2{
+    margin-bottom:20px;
+}
+
+.panel ul{
+    list-style:none;
+}
+
+.panel li{
+    padding:12px 0;
+    border-bottom:1px solid rgba(255,255,255,.18);
+}
+
+.text h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.text p{
+    color:#555;
+    line-height:1.9;
+    margin-bottom:18px;
+}
+
+.footer{
+    text-align:center;
+    padding:60px 20px;
+    color:#666;
+}
+
+@media(max-width:900px){
+
+.hero h1{
+    font-size:44px;
+}
+
+.hero h2{
+    font-size:28px;
+}
+
+.about{
+    grid-template-columns:1fr;
+}
+
+.section-title{
+    font-size:34px;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="container">
+
+<h1>📶 WiFi Manager</h1>
+
+<h2>& Speed Test</h2>
+
+<p>
+Manage your WiFi connection, test internet speed, monitor storage usage,
+clean unnecessary files, and access useful device tools from one simple,
+modern application.
+</p>
+
+<a href="#" class="btn">Explore Features</a>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+✨ Everything You Need
+</h2>
+
+<div class="features">
+
+<div class="card">
+<div class="icon">📶</div>
+<h3>WiFi Manager</h3>
+<p>
+View your current WiFi connection and quickly access useful network information.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📡</div>
+<h3>WiFi List</h3>
+<p>
+Browse nearby WiFi networks and jump directly to your device WiFi settings.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🚀</div>
+<h3>Speed Test</h3>
+<p>
+Measure download and upload speeds with an easy-to-read internet speed meter.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🛡️</div>
+<h3>WiFi Security</h3>
+<p>
+Check the security status of your current wireless network connection.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📊</div>
+<h3>Storage Usage</h3>
+<p>
+Monitor used storage space and view detailed storage information.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🧹</div>
+<h3>Cleanup</h3>
+<p>
+Review cache, temporary files, residual files and other unnecessary data.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📱</div>
+<h3>Device Tools</h3>
+<p>
+Access App List, Device Info, Battery Information and Hotspot tools in one place.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">⚙️</div>
+<h3>Easy Settings</h3>
+<p>
+Change language, read the Privacy Policy, share the app and rate your experience.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+⚡ Powerful Utilities
+</h2>
+
+<div class="tools">
+
+<div class="tool">
+<h2>📶</h2>
+<p>WiFi Tools</p>
+</div>
+
+<div class="tool">
+<h2>🚀</h2>
+<p>Speed Test</p>
+</div>
+
+<div class="tool">
+<h2>📱</h2>
+<p>Device Info</p>
+</div>
+
+<div class="tool">
+<h2>🧹</h2>
+<p>Storage Cleanup</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container about">
+
+<div class="panel">
+
+<h2>Why Choose This App?</h2>
+
+<ul>
+<li>✔ Easy WiFi management</li>
+<li>✔ Fast internet speed testing</li>
+<li>✔ WiFi security information</li>
+<li>✔ Storage usage overview</li>
+<li>✔ Cache & junk file cleanup</li>
+<li>✔ Device information tools</li>
+<li>✔ Battery & hotspot shortcuts</li>
+<li>✔ Modern and simple interface</li>
+</ul>
+
+</div>
+
+<div class="text">
+
+<h2>
+All Your WiFi & Device Tools Together
+</h2>
+
+<p>
+WiFi Manager & Speed Test combines essential networking and device utilities
+into one convenient application, helping you understand your connection,
+monitor storage, and keep your device organized.
+</p>
+
+<p>
+Whether you want to check WiFi information, measure internet speed,
+review storage usage or clean unnecessary files, everything is available
+through an intuitive and easy-to-use interface.
+</p>
+
+<a href="#" class="btn">
+Download Now
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<h2 style="font-size:34px;">
+📶 WiFi Manager & Speed Test
+</h2>
+
+<p style="margin-top:15px;">
+WiFi • Speed Test • Cleanup • Device Tools
+</p>
+
+<p style="margin-top:20px;">
+© 2026 WiFi Manager & Speed Test
+</p>
+
+</footer>
+
+</body>
+</html>
