@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo Recovery & File Restore</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:#f0f7ff;
+      color:#1f2937;
+      line-height:1.7;
+      padding:40px 20px;
+    }
+
+    .container{
+      max-width:920px;
+      margin:auto;
+      background:#ffffff;
+      border-radius:20px;
+      padding:42px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .badge{
+      display:inline-block;
+      background:#dbeafe;
+      color:#1d4ed8;
+      padding:6px 14px;
+      border-radius:999px;
+      font-size:14px;
+      margin-bottom:20px;
+      font-weight:600;
+    }
+
+    h1{
+      font-size:42px;
+      line-height:1.2;
+      color:#111827;
+      margin-bottom:14px;
+    }
+
+    .subtitle{
+      font-size:18px;
+      color:#6b7280;
+      margin-bottom:30px;
+    }
+
+    h2{
+      margin-top:40px;
+      margin-bottom:18px;
+      font-size:28px;
+      color:#111827;
+    }
+
+    p{
+      margin-bottom:18px;
+      color:#374151;
+      font-size:16px;
+    }
+
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:20px;
+      margin-top:20px;
+    }
+
+    .card{
+      background:#f9fafb;
+      border:1px solid #e5e7eb;
+      border-radius:16px;
+      padding:22px;
+      transition:0.2s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    .card h3{
+      font-size:20px;
+      margin-bottom:10px;
+      color:#111827;
+    }
+
+    .card p{
+      margin-bottom:0;
+      color:#4b5563;
+      font-size:15px;
+    }
+
+    ul{
+      margin-left:22px;
+      margin-top:10px;
+    }
+
+    li{
+      margin-bottom:12px;
+      color:#374151;
+    }
+
+    .steps{
+      background:#f9fafb;
+      border-radius:18px;
+      padding:28px;
+      margin-top:20px;
+      border:1px solid #e5e7eb;
+    }
+
+    .step{
+      margin-bottom:18px;
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+    }
+
+    .step-number{
+      width:34px;
+      height:34px;
+      border-radius:50%;
+      background:#1d4ed8;
+      color:#ffffff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:14px;
+      font-weight:bold;
+      flex-shrink:0;
+    }
+
+    .cta{
+      margin-top:50px;
+      background:linear-gradient(135deg,#1d4ed8,#2563eb);
+      border-radius:20px;
+      padding:40px;
+      text-align:center;
+      color:white;
+    }
+
+    .cta h2{
+      color:white;
+      margin-top:0;
+      margin-bottom:12px;
+    }
+
+    .cta p{
+      color:#bfdbfe;
+      margin-bottom:24px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 28px;
+      background:#ffffff;
+      color:#1d4ed8;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.2s ease;
+    }
+
+    .btn:hover{
+      transform:scale(1.04);
+    }
+
+    .footer{
+      margin-top:50px;
+      padding-top:20px;
+      border-top:1px solid #e5e7eb;
+      color:#6b7280;
+      text-align:center;
+      font-size:14px;
+    }
+
+    @media(max-width:768px){
+
+      .container{
+        padding:24px;
+      }
+
+      h1{
+        font-size:34px;
+      }
+
+      h2{
+        font-size:24px;
+      }
+
+      .subtitle{
+        font-size:16px;
+      }
+
+      .cta{
+        padding:28px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="badge">Recovery App</div>
+
+    <h1>Photo Recovery & File Restore</h1>
+
+    <p class="subtitle">
+      Restore your data with file recovery for quick, easy recovery.
+    </p>
+
+    <p>
+      Photo Recovery & File Restore helps you recover deleted photos and restore important files
+      in just a few taps. Whether you accidentally deleted precious memories or lost important
+      documents, our powerful photo recovery and file restore tools make recovery fast, simple,
+      and reliable.
+    </p>
+
+    <p>
+      Built for anyone who needs a quick and easy recovery solution, the app scans your device
+      to find deleted photos, videos, documents, and messenger media.
+    </p>
+
+    <h2>Key Features</h2>
+
+    <div class="feature-grid">
+
+      <div class="card">
+        <h3>📷 Photo Recovery</h3>
+        <p>
+          Recover deleted photos with advanced photo recovery technology that finds
+          lost memories fast and reliably.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🎬 Video Recovery</h3>
+        <p>
+          Restore lost videos using fast video recovery scanning that retrieves
+          your clips before they're gone for good.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>📄 File Recovery</h3>
+        <p>
+          Find deleted documents and other files with smart file recovery that
+          leaves no important data behind.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>💬 Messenger Recovery</h3>
+        <p>
+          Recover messaging media through dedicated messenger recovery tools
+          designed for popular chat apps.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>👁️ Preview Before Restore</h3>
+        <p>
+          Preview recoverable files before restoring so you always know exactly
+          what you're getting back.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>⚡ One-Tap Scan</h3>
+        <p>
+          Scan your device quickly with a single tap and get results in moments
+          — no technical knowledge required.
+        </p>
+      </div>
+
+    </div>
+
+    <h2>Why Choose Photo Recovery & File Restore?</h2>
+
+    <ul>
+      <li>✅ Recover deleted photos with advanced photo recovery technology.</li>
+      <li>✅ Restore lost videos using fast video recovery scanning.</li>
+      <li>✅ Find deleted documents with smart file recovery.</li>
+      <li>✅ Recover messaging media through messenger recovery.</li>
+      <li>✅ Organize restored files in one convenient place.</li>
+      <li>✅ Enjoy a simple, user-friendly experience.</li>
+    </ul>
+
+    <h2>How to Recover Your Files</h2>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="step-number">1</div>
+        <div>
+          Open the app and tap <strong>Start Scan</strong> to begin scanning your device.
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <div>
+          Choose the type of data you want to recover: photos, videos, documents, or messenger media.
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <div>
+          Wait for the scan to complete and browse the list of recoverable files found.
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <div>
+          Preview the files to confirm they are the ones you need.
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">5</div>
+        <div>
+          Tap <strong>Restore</strong> to recover your selected files and save them safely to your device.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cta">
+
+      <h2>Get Your Important Files Back in Minutes</h2>
+
+      <p>
+        Stop worrying about accidental deletion. Recover photos, videos, documents,
+        and messaging media quickly while saving valuable memories and important files.
+      </p>
+
+      <a href="#" class="btn">
+        Download Photo Recovery & File Restore
+      </a>
+
+    </div>
+
+    <div class="footer">
+      © 2026 Photo Recovery & File Restore. All rights reserved.
+    </div>
+
+  </div>
+
+</body>
+</html>
