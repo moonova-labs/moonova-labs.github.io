@@ -1,1 +1,455 @@
-Hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dog Translator: Pet Sounds</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fffaf5;
+    color:#333;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    width:700px;
+    height:700px;
+    background:linear-gradient(45deg,#ffb347,#ff8c42);
+    border-radius:50%;
+    top:-350px;
+    left:-250px;
+    opacity:.18;
+    z-index:-1;
+}
+
+body::after{
+    content:'';
+    position:fixed;
+    width:650px;
+    height:650px;
+    background:linear-gradient(45deg,#ff9a3c,#ff6b35);
+    border-radius:50%;
+    bottom:-320px;
+    right:-250px;
+    opacity:.15;
+    z-index:-1;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 0;
+}
+
+.hero h1{
+    font-size:64px;
+    font-weight:800;
+    background:linear-gradient(90deg,#ff8c42,#ff6b35,#ffb347);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero h2{
+    margin-top:10px;
+    font-size:34px;
+    color:#444;
+}
+
+.hero p{
+    margin:30px auto;
+    max-width:900px;
+    font-size:20px;
+    line-height:1.9;
+    color:#555;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:18px 42px;
+    border-radius:999px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+    background:linear-gradient(135deg,#ff8c42,#ff6b35);
+    box-shadow:0 15px 35px rgba(255,107,53,.35);
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:60px;
+    color:#222;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#fff;
+    border-radius:24px;
+    padding:35px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.icon{
+    font-size:42px;
+    margin-bottom:18px;
+}
+
+.card h3{
+    margin-bottom:14px;
+    font-size:22px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.7;
+}
+
+.highlights{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.highlight{
+    border-radius:24px;
+    color:#fff;
+    text-align:center;
+    padding:32px;
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+.highlight:nth-child(1){
+    background:linear-gradient(135deg,#ff8c42,#ff6b35);
+}
+
+.highlight:nth-child(2){
+    background:linear-gradient(135deg,#ffb347,#ff8c42);
+}
+
+.highlight:nth-child(3){
+    background:linear-gradient(135deg,#ff6b35,#ff4d4d);
+}
+
+.highlight:nth-child(4){
+    background:linear-gradient(135deg,#ff9a3c,#ff7f11);
+}
+
+.highlight h2{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.panel{
+    background:linear-gradient(145deg,#ff8c42,#ff6b35);
+    color:#fff;
+    border-radius:30px;
+    padding:35px;
+    box-shadow:0 20px 60px rgba(255,107,53,.25);
+}
+
+.panel h2{
+    margin-bottom:20px;
+}
+
+.panel ul{
+    list-style:none;
+}
+
+.panel li{
+    padding:12px 0;
+    border-bottom:1px solid rgba(255,255,255,.18);
+}
+
+.text h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.text p{
+    color:#555;
+    line-height:1.9;
+    margin-bottom:18px;
+}
+
+.footer{
+    text-align:center;
+    padding:60px 20px;
+    color:#666;
+}
+
+@media(max-width:900px){
+
+.hero h1{
+    font-size:44px;
+}
+
+.hero h2{
+    font-size:28px;
+}
+
+.about{
+    grid-template-columns:1fr;
+}
+
+.section-title{
+    font-size:34px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="container">
+
+<h1>🐶 Dog Translator</h1>
+
+<h2>Pet Sounds</h2>
+
+<p>
+Play, train, and bond with your furry friends using playful pet translations,
+realistic dog & cat sounds, training tools, pet profiles, and daily care
+features—all in one fun and easy-to-use app.
+</p>
+
+<a href="#" class="btn">
+Start the Fun
+</a>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+✨ Fun Features for Every Pet Owner
+</h2>
+
+<div class="features">
+
+<div class="card">
+<div class="icon">🐶</div>
+<h3>Dog Translator</h3>
+<p>
+Record your voice and enjoy simulated human-to-dog translations designed for fun.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🎙️</div>
+<h3>Pet Translator</h3>
+<p>
+Capture barking or meowing sounds and explore entertaining pet-to-human responses.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🔊</div>
+<h3>Dog & Cat Sounds</h3>
+<p>
+Discover sounds for happy, hungry, excited, angry, surprised, and many more moods.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📞</div>
+<h3>Fake Calls</h3>
+<p>
+Create funny dog calls and video calls to surprise family and friends.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🦴</div>
+<h3>Pet Training</h3>
+<p>
+Use dog whistles, clickers, training videos, and command guides to support learning.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🐾</div>
+<h3>Pet Profiles</h3>
+<p>
+Store your pet's name, breed, birthday, photos, and important care information.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">💉</div>
+<h3>Vaccine Reminders</h3>
+<p>
+Track vaccination history and never miss important care dates.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📚</div>
+<h3>Pet Care Library</h3>
+<p>
+Explore breed information, pet care tips, and useful training content.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+❤️ Everything Your Pet Needs
+</h2>
+
+<div class="highlights">
+
+<div class="highlight">
+<h2>🐶</h2>
+<p>Pet Translator</p>
+</div>
+
+<div class="highlight">
+<h2>🎵</h2>
+<p>Dog & Cat Sounds</p>
+</div>
+
+<div class="highlight">
+<h2>🦴</h2>
+<p>Training Tools</p>
+</div>
+
+<div class="highlight">
+<h2>🐾</h2>
+<p>Pet Care</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container about">
+
+<div class="panel">
+
+<h2>Why Pet Owners Love It</h2>
+
+<ul>
+<li>✔ Fun translator simulation</li>
+<li>✔ Hundreds of dog & cat sounds</li>
+<li>✔ Dog whistle & clicker</li>
+<li>✔ Fake calls & video calls</li>
+<li>✔ Pet profiles & photos</li>
+<li>✔ Vaccination reminders</li>
+<li>✔ Breed information</li>
+<li>✔ Clean & beginner-friendly interface</li>
+</ul>
+
+</div>
+
+<div class="text">
+
+<h2>
+Talk, Train & Care
+</h2>
+
+<p>
+Dog Translator: Pet Sounds brings together playful pet communication,
+training utilities, and pet care management in one modern application.
+</p>
+
+<p>
+Whether you're entertaining your puppy, practicing basic commands,
+learning about different breeds, or keeping track of vaccinations,
+the app makes every day with your pet more enjoyable.
+</p>
+
+<a href="#" class="btn">
+Download Now
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<h2 style="font-size:34px;">
+🐶 Dog Translator: Pet Sounds
+</h2>
+
+<p style="margin-top:15px;">
+Translator • Sounds • Training • Pet Care
+</p>
+
+<p style="margin-top:20px;">
+© 2026 Dog Translator: Pet Sounds
+</p>
+
+</footer>
+
+</body>
+</html>
